@@ -3411,11 +3411,9 @@ addLevelingLevel(sender, 5)
 break
 
 case 'play':
-	assistant = fs.readFileSync('./src/assistant.jpg')		
-	if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: noreg, caption: `😊Hola, ${timeFt}.\n*Yo soy Sam330*, Asistente de *Samu330*!.\n\nAl parecer no estas registrado en _*NyanBot*_, Para registrarte usa el comando: *${prefix}reg*.`, thumbnail: assistant, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 	if (!q) return reply('*Que audio quieres descargar?.....*')
 	let plist = await yts(q)
-	sendFileFromUrl(plist.all[0].image, image, {quoted: sam, caption: '_*Si no ves la lista de descarga de tu audio, prueba usando el comando play2*_'})
+	sendFileFromUrl(plist.all[0].image, image, {quoted: sam, caption: '_*_'})
 
 	let play2v = samu330.prepareMessageFromContent(from,{
 		"listMessage": {
@@ -3427,37 +3425,15 @@ case 'play':
 					{ "title": `[ ${plist.all[0].title} ]`,
 					  "rows": [
 						{
-						  "title": '🎧Descarga el Audio Original',
-						  "description": '- Audio en mp3 sin modificacion de duracion -',
+						  "title": '🎧SI Descargar',
+						  "description": '',
 						  "rowId": `${plist.all[0].title}@list`
 						},
 						{
-						  "title": '🎙Descarga el Audio Original en Nota de Voz',
-						  "description": '- Audio en nota de voz sin modificacion de duracion -',
+						  "title": '🎙No es esa',
+						  "description": '',
 						  "rowId": `${plist.all[0].title}@list1`
-						},
-                        {
-						  "title": '🎧Descarga el Audio Original con duracion cambiada',
-						  "description": '- Audio en mp3 con modificacion de duracion -',
-						  "rowId": `${plist.all[0].title}@list2`
-						},
-						{
-						  "title": '🎙Descarga el Audio Original en Nota de Voz con duracion cambiada',
-						  "description": '- Audio en nota de voz con modificacion de duracion -',
-						  "rowId": `${plist.all[0].title}@list3`
 						}
-					  ]
-					},
-                    {
-                        "title": `[ Audio con Efecto ]`,
-                        "rows": [
-                          {
-                            "title": '💎Descarga el Audio Con efecto SlowMotion',
-                            "description": '- Audio en nota de voz con efecto SlowMotion -',
-                            "rowId": `${plist.all[0].title}@list4`
-                          }
-                        ]    
-                    }
 				  ]
 				}
 	  }, {quoted: sam})
