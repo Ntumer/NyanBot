@@ -1069,7 +1069,7 @@ const stc = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
 ╭─────────────┴╮
 │
 ╰──────────────╯`
-const Menug = `➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙.li Oℱịcιɑl.li                                                                            
+const Menug = `➫                                                                            
         🔐Hola *${pushname}*
     
 ${bodyM} ${samu}${prefix}antilink${samu}
@@ -1608,20 +1608,12 @@ ${opcion}`,
 											"title": "Comandos para el Owner🙂",
 											"rowId": "owner"
 										},
-										{
-											"title": `🗡Comandos para explotar Grupos!!💣`,
-											"rowId": "crash"
-										},
-										{
-											"title": `Audios🎧`,
-											"rowId": "audios"
-										},
                                         {
 											"title": `Juegos🎮`,
 											"rowId": "juegos"
 										},
 										{
-											"title": "🍉Creditos y agradecimientos🏹",
+											"title": "🍉INFORMACION🏹",
 											"rowId": `thanksto`
 										}
 									]
@@ -2856,14 +2848,6 @@ setTimeout( () => {
 samu330.close() }, 3000)
 break
 
-case 'restaurar':
-if (!itsMe) return reply('tu quien eres para decirme que hacer!?🤔')
-reply('*LA INFORMACION DE ESTE USUARIO SE RESTABLECERA PARA PODER USAR Y ESCANEAR EL CODIGO EN OTRO DISPOSITIVO*')
-exec(`bash restore.sh`, (err, stdout) => {
-if (err) return reply(err)
-if (stdout) reply(stdout)
-})
-break
 	
 case 'actualizar':
 case 'update':
@@ -2908,16 +2892,6 @@ nkd = rmd[Math.floor(Math.random() * rmd.length)]
 samu330.sendMessage(from, nkd, sticker, {quoted: sam})
 break
 		
-case 'reportar':
-if (args.length <= 1) return reply(`Ejemplo: ${prefix}reportar "Amm... disculpa, tengo un error en...."`)
-if (args.length >= 300) return samu330.sendMessage(from, '*El limite del reporte es de maximo 300 caracteres!*', MessageType.text, {quoted: ftoko})
-var numerorepo = sam.participant
-reporte = `[REPORTE]\nDe: @${sender.split("@s.whatsapp.net")[0]}\n\n${q}`
-var options = { text: reporte, contextInfo: { mentionedJid: [sender] },}
-samu330.sendMessage('5219984907794@s.whatsapp.net', options, MessageType.text, {quoted: floc})
-reply("*El reporte fue enviado al CREADOR del bot, reporte falso o bura = Block*")
-addFilter(from)
-break
 
 case 'teles':
 if (args.length == 0) return reply(`Ejemplo: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
@@ -2987,41 +2961,7 @@ reply('😱')
 break
 	
 //======== _-By Samu330-_ ========\\
-case 'inspeccionar':
-if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply('*Este no es un link de WhatsApp...*')
-if (!q) return reply('*🙄Y el link??...*')
-sp = args[0]
-jids = []
-var net = sp.split('https://chat.whatsapp.com/')[1]
-if (!net) return reply('Porfavor aegurate que el link sea de un grupo de whatsapp: *https://whatsapp.com/....*')
-var { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation} = await samu330.query({ 
-json: ["query", "invite", net],
-expect200:true })
-let insSm = `inspeccion_
 
-🪀 *Id* : _${id}_
-
-👤 *Creador del grupo:* ${owner ? `Owner : @${owner.split('@')[0]}` : 'Owner : -'}
-
-*° Nombre del Grupo:* _${subject}_
-
-*° Fecha de creacion:* ${Date(creation * 1000)}
-
-*° Total de Miembros:* ${size}
-
-${desc ? `*Descripcion:* ${desc}` : 'Desc : Sin descripcion'}
-
-*° Id de la Descripcion:* ${descId}
-
-${descOwner ? `° Descripcion cambiada por @${descOwner.split('@')[0]}` : 'Descripcion cambiada por : -'}\n\n*Fecha* : ${descTime ? `${Date(descTime * 1000)}` : '-'}\n\n*° Contactos agendados*\n`
-for ( let y of participants) {
-insSm += `> @${y.id.split('@')[0]}\n*Admin* : ${y.isAdmin ? 'Si' : 'No'}\n`
-jids.push(`${y.id.replace(/@c.us/g,'@s.whatsapp.net')}`)
-}
-jids.push(`${owner ? `${owner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
-jids.push(`${descOwner ? `${descOwner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
-samu330.sendMessage(from, insSm, MessageType.text, {quoted: fliveLoc})
-break
 		
 case 'takestick':
 case 'robar':
@@ -5050,7 +4990,7 @@ case 'simi':
 
 samu330.updatePresence(from, Presence.composing)
 texto = body.slice(5)
-sim = await getJson(`https://api.simsimi.net/v1/?text=${texto}&lang=es`)
+sim = await getJson(`https://api.simsimi.net/v2/?text=${texto}&lc=es&lang=es`)
 smuu = (`${sim.success}`)
 samu330.sendMessage(from, smuu, MessageType.text, {quoted: { key: {
 fromMe: false,
@@ -5063,7 +5003,7 @@ message: {
 "mimetype": "image/jpeg",
 "jpegThumbnail": fs.readFileSync(`./src/simi.jpg`)
 },
-"title": `➫𝐒𝐢𝐦𝐬𝐢𝐦𝐢 | 𝐒𝐚𝐦 𝐲 𝐏𝐞𝐫𝐫𝐲🔥❣️`,
+"title": `➫𝐒𝐢𝐦𝐬𝐢𝐦𝐢 ️`,
 "description": `${texto}`,
 "currencyCode": '',
 "priceAmount1000": "999999999999999999999",
