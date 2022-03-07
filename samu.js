@@ -2070,7 +2070,7 @@ switch (command) {
 case 'help':
 case 'menu':
 case 'comandos':
-samu330.sendMessage(from, fs.readFileSync(`./temp/menu.webp`), sticker, {quoted: fimg, "forwardingScore": 9999, "isForwarded": true})
+samu330.sendMessage(from, fs.readFileSync(`./temp/Samu1.webp`), sticker, {quoted: fimg, "forwardingScore": 9999, "isForwarded": true})
 break
 
 case 'menuofc':
