@@ -3411,23 +3411,22 @@ addLevelingLevel(sender, 5)
 break
 
 case 'play':
-	assistant = fs.readFileSync('./src/assistant.jpg')		
-	if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: noreg, caption: `😊Hola, ${timeFt}.\n*Yo soy Sam330*, Asistente de *Samu330*!.\n\nAl parecer no estas registrado en _*NyanBot*_, Para registrarte usa el comando: *${prefix}reg*.`, thumbnail: assistant, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
+	
 	if (!q) return reply('*Que audio quieres descargar?.....*')
 	let plist = await yts(q)
 	sendFileFromUrl(plist.all[0].image, image, {quoted: sam, caption: '_*Preview*_'})
 
 	let play2v = samu330.prepareMessageFromContent(from,{
 		"listMessage": {
-				  "title": "🌬 *DESCARGAS DE AUDIO!!*",
-				  "description": `\n✍🏻Informacion de su Audio.\n\n*°Subido hace* ${plist.all[0].ago}\n\n*°Vistas :* ${plist.all[0].views}\n\n*°Duracion :* ${plist.all[0].timestamp}\n\n*°Canal :* ${plist.all[0].author.name}\n\n*°Link del Canal :* ${plist.all[0].author.url}`,
-				  "buttonText": "Queres descargar esta musica",
+				  "title": "🌬 Descarga disponible",
+				  "description": `\n*°Vistas :* ${plist.all[0].views}\n*°Duracion :* ${plist.all[0].timestamp}\n*°Canal :* ${plist.all[0].author.name}`,
+				  "buttonText": "Click Aqui para descargar",
 				  "listType": "SINGLE_SELECT",
 				  "sections": [
 					{ "title": `[ ${plist.all[0].title} ]`,
 					  "rows": [
 						{
-						  "title": '🎧Si lo quiero descargar',
+						  "title": '🎧Si es',
 						  "description": '- Audio en mp3',
 						  "rowId": `${plist.all[0].title}@list`
 						},
@@ -3534,7 +3533,7 @@ reply(`*Doxeo de ${mentionUser} echo por Samu330✅*
 
 =====================
 
-*FDx Bt 🔥𝘚𝘢𝘮𝘶𝟥𝟥𝟢🔥*
+*FDx Bt *
 `)
 break
 		
