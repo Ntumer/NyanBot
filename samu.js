@@ -1923,8 +1923,8 @@ _Ps DADOS!!_`)
 			if (sam.message.listResponseMessage){
 				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
 				if (test.includes(`VIP`)){
-					reply('*Espera porfavor...*')
-			samu330.sendMessage(from, fs.readFileSync('./media/vip.mp4'), video, {quoted: sam, mimetype: 'video/gif', caption: `👑 *REGALITO PARA LOS USUARIOS DE NYANBOT POR PARTE DE @${'5219984907794@s.whatsapp.net'.split("@")[0]}* 🍑`, sendEphemeral: true, duration: -6666666, contextInfo: {mentionedJid: ['5219984907794@s.whatsapp.net']}})
+					 
+			samu330.sendMessage(from, fs.readFileSync('./media/vip.mp4'), video, {quoted: sam, mimetype: 'video/gif', caption: ``, sendEphemeral: true, duration: -6666666, contextInfo: {mentionedJid: ['5219984907794@s.whatsapp.net']}})
 			}
 			}
 
@@ -2718,60 +2718,7 @@ case 'reglas':
 reply(`*Hola, estas son las reglas que debes seguir para que no tengas ningun problema con el propietario del bot*\n\n1- _Manten una formalidad respetuosa_\n2- _Si vas a añadir a imsane a algun grupo, verifica que el grupo cumpla con los requisitos que son tener minimo 5 personas_\n3-*Seras bloqueado inmediatamente*\n5- _🕐Espera el tiempo nesesario cuando pidas alguna funcion, ya que algunas tardan en realizarse, no vuelvas a pedir el comando nuevamente hasta que te llege un mensaje de error_\n\nLee las reglas y cumplelas, no te quieras hacer el chistoso, por que no lo eres y ni te sale, asi que porfavor respeta las reglas.`)
 break
 //Con este case se envia la aplicacion Tutorial
-case 'tutorial': 
-case 'crear':
-result = fs.readFileSync(`./media/app.apk`)
-var _0x760e=["\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x76\x6E\x64\x2E\x61\x6E\x64\x72\x6F\x69\x64\x2E\x70\x61\x63\x6B\x61\x67\x65\x2D\x61\x72\x63\x68\x69\x76\x65","\uD83D\uDC09\x41\x70\x70\x42\x6F\x74\uD83D\uDC09\x20\x62\x79\x20\uD83D\uDCCC\x53\x61\x6D\x75\x33\x33\x30\uD83E\uDD40","\uD83C\uDF52\x4E\x79\x61\x6E\x42\x6F\x74\x20\x7C\x20\x53\x61\x6D\x75\x33\x33\x30\uD83E\uDE80","\x5B\x20\u2605\x20\x5D\x20\u5C71\u59C6\x20\x33\x33\x30","\x2E\x2F\x73\x72\x63\x2F\x61\x72\x61\x2E\x70\x6E\x67","\x72\x65\x61\x64\x46\x69\x6C\x65\x53\x79\x6E\x63","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x79\x6F\x75\x74\x75\x62\x65\x2E\x63\x6F\x6D\x2F\x77\x61\x74\x63\x68\x3F\x76\x3D\x72\x4F\x50\x42\x65\x36\x4F\x2D\x6B\x33\x4D\x26\x74\x3D\x33\x30\x73","\x73\x65\x6E\x64\x4D\x65\x73\x73\x61\x67\x65"];samu330[_0x760e[7]](from,result,document,{mimetype:_0x760e[0],filename:_0x760e[1],quoted:fdoc,contextInfo:{externalAdReply:{title:`${_0x760e[2]}`,body:_0x760e[3],mediaType:2,thumbnail:fs[_0x760e[5]](_0x760e[4]),mediaUrl:`${_0x760e[6]}`}}})
-break
 
-case 'git':
-reshb = await samu330.prepareMessageFromContent(from,{
-"templateMessage": {
-"hydratedFourRowTemplate": {
-"hydratedContentText": "",
-"hydratedFooterText": "",
-"hydratedButtons": [
-{
-"urlButton": {
-"displayText": "",
-"url": ""
-},
-"index": 1
-}
-]
-},
-"hydratedTemplate": {
-"hydratedContentText": `Hola ${pushname}`,
-"hydratedFooterText": `El git de Este Bot...`,
-"hydratedButtons": [
-{
-"urlButton": {
-"displayText": `Click Para ir Al git Ofc...`,
-"url": "https://github.com/InsaneService/InsaneService"
-},
-"index": 0
-}
-]
-}
-}
-}, {})
-samu330.relayWAMessage(reshb)
-samu330.sendMessage(from, { text: "Git Ofc del Creador:\nhttps://github.com/InsaneService", matchedText: 'https://github.com/InsaneService/InsaneService', description: "", title: "Click Aqui !!!", jpegThumbnail: fs.readFileSync('./media/reply.png') }, 'extendedTextMessage', { detectLinks: false, contextInfo: { forwardingScore: 508, isForwarded: true}, quoted: sam})
-break
-		
-case 'nuevogrupo':
-const nombregc = args.join(' ')
-if (!nombregc) return reply('*Porfavor escribe el nombre que quieras que tenga el grupo')
-const group = await samu330.groupCreate(`${nombregc}`, [sender])
-reply(`*EL GRUPO FUE CREADO CORRECTAMENTE CON EL NOMBRE:*\n\n*${nombregc}*\n\nid del grupo: ${group.gid}`)
-samu330.sendMessage(group.gid, "hello everyone", MessageType.text, {quoted: fliveLoc})
-break
-		
-case 'clima':
-if (!q) return reply('*Y el lugar del que quieres ver el clima?*')
-clima = `https://api.apiflash.com/v1/urltoimage?access_key=57fcd6384cff4e529b9ca76089f05992&url=https://pt.wttr.in/${q}`
-sendFileFromUrl(clima, image, {quoted: fimg})
-break
 		
 case 'idiomas':
 reply(`*Estos son los idiomas soportados por la voz👇🏻*:
@@ -3268,7 +3215,7 @@ break
 
 case 'reversa':
 if (!isQuotedVideo) return reply('Porfavor etiqueta un video con el comando!')
-reply('*Espera un momento porfavor....*')
+ 
 encmediav = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav = await samu330.downloadAndSaveMediaMessage(encmediav)
 ran = getRandom('.mp4')
@@ -3372,7 +3319,7 @@ break
 	
 case '+volumen':
 if (!isQuotedAudio) return reply('Porfavor etiqueta una audio con el comando!')
-reply('*Espera un momento porfavor....*')
+ 
 encmediav = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav = await samu330.downloadAndSaveMediaMessage(encmediav)
 exec(`ffmpeg -i ${mediav} -filter:a "volume=1.5" 'output.wav'`)
