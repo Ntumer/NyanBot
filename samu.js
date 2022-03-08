@@ -1069,7 +1069,7 @@ const stc = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
 ╭─────────────┴╮
 │
 ╰──────────────╯`
-const Menug = `➫                                                                            
+const Menug = `➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙.li Oℱịcιɑl.li                                                                            
         🔐Hola *${pushname}*
     
 ${bodyM} ${samu}${prefix}antilink${samu}
@@ -1608,12 +1608,20 @@ ${opcion}`,
 											"title": "Comandos para el Owner🙂",
 											"rowId": "owner"
 										},
+										{
+											"title": `🗡Comandos para explotar Grupos!!💣`,
+											"rowId": "crash"
+										},
+										{
+											"title": `Audios🎧`,
+											"rowId": "audios"
+										},
                                         {
 											"title": `Juegos🎮`,
 											"rowId": "juegos"
 										},
 										{
-											"title": "🍉INFORMACION🏹",
+											"title": "🍉Creditos y agradecimientos🏹",
 											"rowId": `thanksto`
 										}
 									]
@@ -1713,7 +1721,7 @@ _Tipo de usuario:_ ${tipoDeUsr}
                     addFilter(from)
                     addLevelingLevel(sender, 5)		
                     samu330.sendMessage(from, Menug, MessageType.text, {
-                    quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐𝒔\n❣️⃞🔥𝙎꯭𝙖͠𝙢꯭ 𝙔 ꯭𝙋꯭𝙚𝙧𝙧꯭𝙮🔥❣️" ,"jpegThumbnail": fs.readFileSync(`./NyanBot.jpg`)}}}})
+                    quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐𝒔️" ,"jpegThumbnail": fs.readFileSync(`./NyanBot.jpg`)}}}})
 			}
 			}
 
@@ -1890,7 +1898,6 @@ _Ps DADOS!!_`)
 					porn = await getJson('https://meme-api.herokuapp.com/gimme/lesbians', {
 					method: 'get'
 					})
-					reply(mess.wait)
 					buffer = await getBuffer(`${porn.url}`)
 					samu330.sendMessage(from, buffer, image, {
 					fimg})
@@ -1910,7 +1917,6 @@ _Ps DADOS!!_`)
 					porn = await getJson(`${nk}`, {
 					method: 'get'
 					})
-					reply(mess.wait)
 					buffer = await getBuffer(`${porn.url}`)
 					samu330.sendMessage(from, buffer, image, {
 					quoted: fimg
@@ -1930,7 +1936,7 @@ _Ps DADOS!!_`)
 					porn = await getJson(`${nk}`, {
 					method: 'get'
 					})
-					reply(mess.wait)
+					
 					buffer = await getBuffer(`${porn.url}`)
 					samu330.sendMessage(from, buffer, image, {
 					quoted: fimg
@@ -1962,7 +1968,6 @@ _Ps DADOS!!_`)
 					porn = await getJson(`${nk}`, {
 					method: 'get'
 					})
-					reply(mess.wait)
 					buffer = await getBuffer(`${porn.url}`)
 					samu330.sendMessage(from, buffer, image, {
 					quoted: fimg
@@ -2591,7 +2596,6 @@ case 'quemusicaes':
 if (!isRegister) return reply(mess.only.usrReg)
 if (!q) return reply('*Porfavor, es nesesario que envies el link de la musica para poder continuar, si no sabes como sacar el link de un audio, usa el siguiente link para sacar un link de tu audio: https://files.catbox.moe*')
 if (!isUrl) return reply('Porfavor envia especificamente un link de la musica')
-reply(mess.wait)
 musica = await getJson(`https://api.lolhuman.xyz/api/musicsearch?apikey=${api}&file=${q}`)
 p = musica.result
 
@@ -2848,6 +2852,14 @@ setTimeout( () => {
 samu330.close() }, 3000)
 break
 
+case 'restaurar':
+if (!itsMe) return reply('tu quien eres para decirme que hacer!?🤔')
+reply('*LA INFORMACION DE ESTE USUARIO SE RESTABLECERA PARA PODER USAR Y ESCANEAR EL CODIGO EN OTRO DISPOSITIVO*')
+exec(`bash restore.sh`, (err, stdout) => {
+if (err) return reply(err)
+if (stdout) reply(stdout)
+})
+break
 	
 case 'actualizar':
 case 'update':
@@ -2892,6 +2904,16 @@ nkd = rmd[Math.floor(Math.random() * rmd.length)]
 samu330.sendMessage(from, nkd, sticker, {quoted: sam})
 break
 		
+case 'reportar':
+if (args.length <= 1) return reply(`Ejemplo: ${prefix}reportar "Amm... disculpa, tengo un error en...."`)
+if (args.length >= 300) return samu330.sendMessage(from, '*El limite del reporte es de maximo 300 caracteres!*', MessageType.text, {quoted: ftoko})
+var numerorepo = sam.participant
+reporte = `[REPORTE]\nDe: @${sender.split("@s.whatsapp.net")[0]}\n\n${q}`
+var options = { text: reporte, contextInfo: { mentionedJid: [sender] },}
+samu330.sendMessage('5219984907794@s.whatsapp.net', options, MessageType.text, {quoted: floc})
+reply("*El reporte fue enviado al CREADOR del bot, reporte falso o bura = Block*")
+addFilter(from)
+break
 
 case 'teles':
 if (args.length == 0) return reply(`Ejemplo: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
@@ -2961,7 +2983,41 @@ reply('😱')
 break
 	
 //======== _-By Samu330-_ ========\\
+case 'inspeccionar':
+if (!isUrl(args[0]) && !args[0].includes('whatsapp.com')) return reply('*Este no es un link de WhatsApp...*')
+if (!q) return reply('*🙄Y el link??...*')
+sp = args[0]
+jids = []
+var net = sp.split('https://chat.whatsapp.com/')[1]
+if (!net) return reply('Porfavor aegurate que el link sea de un grupo de whatsapp: *https://whatsapp.com/....*')
+var { id, owner, subject, subjectOwner, desc, descId, participants, size, descOwner, descTime, creation} = await samu330.query({ 
+json: ["query", "invite", net],
+expect200:true })
+let insSm = `inspeccion_
 
+🪀 *Id* : _${id}_
+
+👤 *Creador del grupo:* ${owner ? `Owner : @${owner.split('@')[0]}` : 'Owner : -'}
+
+*° Nombre del Grupo:* _${subject}_
+
+*° Fecha de creacion:* ${Date(creation * 1000)}
+
+*° Total de Miembros:* ${size}
+
+${desc ? `*Descripcion:* ${desc}` : 'Desc : Sin descripcion'}
+
+*° Id de la Descripcion:* ${descId}
+
+${descOwner ? `° Descripcion cambiada por @${descOwner.split('@')[0]}` : 'Descripcion cambiada por : -'}\n\n*Fecha* : ${descTime ? `${Date(descTime * 1000)}` : '-'}\n\n*° Contactos agendados*\n`
+for ( let y of participants) {
+insSm += `> @${y.id.split('@')[0]}\n*Admin* : ${y.isAdmin ? 'Si' : 'No'}\n`
+jids.push(`${y.id.replace(/@c.us/g,'@s.whatsapp.net')}`)
+}
+jids.push(`${owner ? `${owner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
+jids.push(`${descOwner ? `${descOwner.replace(/@c.us/g,'@s.whatsapp.net')}` : '-'}`)
+samu330.sendMessage(from, insSm, MessageType.text, {quoted: fliveLoc})
+break
 		
 case 'takestick':
 case 'robar':
@@ -2974,7 +3030,7 @@ if (!q) return reply('*Y el nombre de autor y paquete?*')
 if (!pack) return reply(`*Porfavor escribe bien el formato: ${prefix + command} nombre|autor*`)
 if (!author2) return reply(`*Porfavor escribe bien el formato: ${prefix + command} nombre|autor*`)
 const dlfile = await samu330.downloadMediaMessage(encmediats)
-reply(mess.wait)
+ 
 const bas64 = `data:image/jpeg;base64,${dlfile.toString('base64')}`
 var mantap = await convertSticker(bas64, `${author2}`, `${pack}`)
 var imageBuffer = new Buffer.from(mantap, 'base64');
@@ -2985,7 +3041,7 @@ break
 case 'sp':
 mentioneds = sam.message.extendedTextMessage.contextInfo.mentionedJid
 picM = samu330.getProfilePicture(mentioneds)
-reply(mess.wait)
+ 
 const bas64sp = `data:image/jpeg;base64,${picM.toString('base64')}`
 var imageBuffersp = new Buffer.from(mantapsp, 'base64');
 var mantapsp = await convertSticker(bas64sp, `Insane @servicioinsane\n`, `${pushname}\n`)
@@ -3351,30 +3407,51 @@ addLevelingLevel(sender, 5)
 break
 
 case 'play':
-	
+	assistant = fs.readFileSync('./src/assistant.jpg')		
+	if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: noreg, caption: `😊Hola, ${timeFt}.\n*Yo soy Sam330*, Asistente de *Samu330*!.\n\nAl parecer no estas registrado en _*NyanBot*_, Para registrarte usa el comando: *${prefix}reg*.`, thumbnail: assistant, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 	if (!q) return reply('*Que audio quieres descargar?.....*')
 	let plist = await yts(q)
-	sendFileFromUrl(plist.all[0].image, image, {quoted: sam, caption: '_*Preview*_'})
+	sendFileFromUrl(plist.all[0].image, image, {quoted: sam, caption: '_*Si no ves la lista de descarga de tu audio, prueba usando el comando play2*_'})
 
 	let play2v = samu330.prepareMessageFromContent(from,{
 		"listMessage": {
-				  "title": "🌬 Descarga disponible",
-				  "description": `\n*°Vistas :* ${plist.all[0].views}\n*°Duracion :* ${plist.all[0].timestamp}\n*°Canal :* ${plist.all[0].author.name}`,
-				  "buttonText": "Click Aqui para descargar",
+				  "title": "🌬 *DESCARGAS DE AUDIO!!*",
+				  "description": `\n✍🏻Informacion de su Audio.\n\n*°Subido hace* ${plist.all[0].ago}\n\n*°Vistas :* ${plist.all[0].views}\n\n*°Duracion :* ${plist.all[0].timestamp}\n\n*°Canal :* ${plist.all[0].author.name}\n\n*°Link del Canal :* ${plist.all[0].author.url}`,
+				  "buttonText": "SELECCIONA UN FORMATO DE DESCARGA",
 				  "listType": "SINGLE_SELECT",
 				  "sections": [
 					{ "title": `[ ${plist.all[0].title} ]`,
 					  "rows": [
 						{
-						  "title": '🎧Si es',
-						  "description": '- Audio en mp3',
+						  "title": '🎧Descarga el Audio Original',
+						  "description": '- Audio en mp3 sin modificacion de duracion -',
 						  "rowId": `${plist.all[0].title}@list`
 						},
 						{
-						  "title": '🎙No descargar',
-						  "description": '',
-						  "rowId": ``
+						  "title": '🎙Descarga el Audio Original en Nota de Voz',
+						  "description": '- Audio en nota de voz sin modificacion de duracion -',
+						  "rowId": `${plist.all[0].title}@list1`
+						},
+                        {
+						  "title": '🎧Descarga el Audio Original con duracion cambiada',
+						  "description": '- Audio en mp3 con modificacion de duracion -',
+						  "rowId": `${plist.all[0].title}@list2`
+						},
+						{
+						  "title": '🎙Descarga el Audio Original en Nota de Voz con duracion cambiada',
+						  "description": '- Audio en nota de voz con modificacion de duracion -',
+						  "rowId": `${plist.all[0].title}@list3`
 						}
+					  ]
+					},
+                    {
+                        "title": `[ Audio con Efecto ]`,
+                        "rows": [
+                          {
+                            "title": '💎Descarga el Audio Con efecto SlowMotion',
+                            "description": '- Audio en nota de voz con efecto SlowMotion -',
+                            "rowId": `${plist.all[0].title}@list4`
+                          }
                         ]    
                     }
 				  ]
@@ -3473,7 +3550,7 @@ reply(`*Doxeo de ${mentionUser} echo por Samu330✅*
 
 =====================
 
-*FDx Bt *
+*FDx Bt 🔥𝘚𝘢𝘮𝘶𝟥𝟥𝟢🔥*
 `)
 break
 		
@@ -3744,7 +3821,7 @@ if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: no
 if (args.length < 1) return reply('Y el link?')
 if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply('Link de YouTube we, *De YouTube!!*')
 teks = args.join(' ')
-reply(mess.wait)
+ 
 resyv = await y2mateV(teks).catch(e => {
 reply('_[ ! ] Error del servidor_')
 })
@@ -3769,7 +3846,7 @@ if (!isRegister) return reply(mess.only.usrReg)
 try {
 beh = await getJson(`https://meme-api.herokuapp.com/gimme/memesmexico`)
 pint = await getBuffer(`${beh.url}`)
-reply(mess.wait)
+ 
 samu330.sendMessage(from, pint, image, {
 quoted: fdoc, caption: `${beh.title}`, contextInfo: {"forwardingScore": 9999, "isForwarded": true}
 })
@@ -3799,7 +3876,7 @@ addFilter(from)
 break
 
 case 'imut':
-reply(mess.wait)
+ 
 im = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 ut = await samu330.downloadAndSaveMediaMessage(im)
 ran = getRandom('.mp3')
@@ -3813,7 +3890,7 @@ fs.unlinkSync(ran)
 addFilter(from)
 break
 case 'hode':
-reply(mess.wait)
+ 
 ho = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 de = await samu330.downloadAndSaveMediaMessage(ho)
 ran = getRandom('.mp3')
@@ -3828,7 +3905,7 @@ addFilter(from)
 break
 
 case 'trigger':
-reply(mess.wait)
+ 
 tri = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 ger = await samu330.downloadAndSaveMediaMessage(tri)
 ran = getRandom('.mp3')
@@ -3844,7 +3921,7 @@ break
 
 case 'slow':
 case 'lento':
-reply(mess.wait)
+ 
 low = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 slo = await samu330.downloadAndSaveMediaMessage(low)
 ran = getRandom('.mp3')
@@ -3858,7 +3935,7 @@ fs.unlinkSync(ran)
 addFilter(from)
 break
 case 'ardilla':
-reply(mess.wait)
+ 
 pai = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 
 tup = await samu330.downloadAndSaveMediaMessage(pai)
@@ -3873,7 +3950,7 @@ fs.unlinkSync(ran)
 addFilter(from)
 break
 case 'grave':
-reply(mess.wait)
+ 
 muk = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 gem = await samu330.downloadAndSaveMediaMessage(muk)
 ran = getRandom('.mp3')
@@ -3888,7 +3965,7 @@ addFilter(from)
 break
 case 'bass':
 ass = JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-reply(mess.wait)
+ 
 bas = await samu330.downloadAndSaveMediaMessage(ass)
 ran = getRandom('.mp3')
 exec(`ffmpeg -i ${bas} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, (err, stderr, stdout) => {
@@ -3903,7 +3980,7 @@ break
 
 case 'fantasma':
 if (!isQuotedAudio) return reply('Etiqueta un audio!')	
-reply(mess.wait)
+ 
 encmediaa1 = isQuotedAudio ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
 mediaa1 = await samu330.downloadAndSaveMediaMessage(encmediaa1)
 ran = getRandom('.mp3')
@@ -3919,7 +3996,7 @@ break
 
 case 'robot':
 if (!isQuotedAudio) return reply('Etiqueta un audio!')
-reply(mess.wait)
+ 
 encmediar = isQuotedAudio ? JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo : sam
 mediar = await samu330.downloadAndSaveMediaMessage(encmediar)
 ran = getRandom('.mp3')
@@ -3938,7 +4015,7 @@ break
 case 'rapido':
 addFilter(from)
 if (!isQuotedAudio) return reply('Etiqueta un audio!')
-reply(mess.wait)
+ 
 encmediiiaa = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 medi1a = await samu330.downloadAndSaveMediaMessage(encmediiiaa)
 ran = getRandom('.mp3')
@@ -3971,7 +4048,7 @@ break
 case 'vrapido':
 		    
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
-reply(mess.wait)
+ 
 encmediav1 = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav1 = await samu330.downloadAndSaveMediaMessage(encmediav1)
 ran = getRandom('.mp4')
@@ -3988,7 +4065,7 @@ break
 case 'vlento':
 		    
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
-reply(mess.wait)
+ 
 encmediav2 = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav2 = await samu330.downloadAndSaveMediaMessage(encmediav2)
 ran = getRandom('.mp4')
@@ -4005,7 +4082,7 @@ break
 case 'mirror':
 
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
-reply(mess.wait)
+ 
 encmediav3 = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav4 = await samu330.downloadAndSaveMediaMessage(encmediav3)
 ran = getRandom('.mp4')
@@ -4023,7 +4100,7 @@ break
 case 'vefecto':
 
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
-reply(mess.wait)
+ 
 encmediav5 = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav5 = await samu330.downloadAndSaveMediaMessage(encmediav5)
 ran = getRandom('.mp4')
@@ -4041,7 +4118,7 @@ case 'sinsonido':
 
 
 if (!isQuotedVideo) return reply('*ETIQUETA UN VIDEO JUNTO CON EL COMANDO PORFAVOR!!*')
-reply(mess.wait)
+ 
 encmediav6 = JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 mediav6 = await samu330.downloadAndSaveMediaMessage(encmediav6)
 ran = getRandom('.mp4')
@@ -4668,7 +4745,7 @@ case 'facebook':
 case 'fb':
 if (!isUrl) return reply('Y el Link?')
 if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply('*Seas mmon... link de Facebook!!!*')
-reply(mess.wait)
+ 
 hx.fbdown(q)
 .then(result => {
 reply(result)
@@ -4863,7 +4940,7 @@ break
 case 'pastebin':
 if (args.length < 1) return reply('Escribe el texto que se mostrara en pastebin.')
 paste = `${args.join(' ')}`
-reply(mess.wait)
+ 
 anu = await getJson(`https://api-anoncybfakeplayer.herokuapp.com/pastebin?text=${paste}`, {method: 'get'})
 samu330.sendMessage(from, `${anu.result}`, MessageType.text, {quoted: ftoko, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 break
@@ -4912,7 +4989,7 @@ if (!isRegister) return reply(mess.only.userB)
 var imgbb = require('imgbb-uploader')
 if ((isMedia && !samu.message.videoMessage || isQuotedImage) && args.length == 0) {
 ger = isQuotedImage ? JSON.parse(JSON.stringify(samu).replace('quotedM','m')).message.extendedTextMessage.contextInfo : sam
-reply(mess.wait)
+ 
 owgi = await samu330.downloadAndSaveMediaMessage(ger)
 anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', owgi)
 teks = `${anu.display_url}`
@@ -4990,7 +5067,7 @@ case 'simi':
 
 samu330.updatePresence(from, Presence.composing)
 texto = body.slice(5)
-sim = await getJson(`https://api.simsimi.net/v2/?text=${texto}&lc=es&lang=es`)
+sim = await getJson(`https://api.simsimi.net/v1/?text=${texto}&lang=es`)
 smuu = (`${sim.success}`)
 samu330.sendMessage(from, smuu, MessageType.text, {quoted: { key: {
 fromMe: false,
@@ -5003,7 +5080,7 @@ message: {
 "mimetype": "image/jpeg",
 "jpegThumbnail": fs.readFileSync(`./src/simi.jpg`)
 },
-"title": `➫𝐒𝐢𝐦𝐬𝐢𝐦𝐢 ️`,
+"title": `➫𝐒𝐢𝐦𝐬𝐢𝐦𝐢 | 𝐒𝐚𝐦 𝐲 𝐏𝐞𝐫𝐫𝐲🔥❣️`,
 "description": `${texto}`,
 "currencyCode": '',
 "priceAmount1000": "999999999999999999999",
@@ -5121,7 +5198,7 @@ reply(mess.ferr)
 break
 case 'queanime':
 if ((isMedia && !sam.message.videoMessage || isQuotedImage) && args.length == 0) {
-reply(mess.wait)
+ 
 const encmediaa = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam
 const mediaa = await samu330.downloadMediaMessage(encmediaa)
 await wait(mediaa).then(res => {
@@ -5538,7 +5615,7 @@ addFilter(from)
 var imgbb = require('imgbb-uploader')
 if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
 ger = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
-reply(mess.wait);
+ ;
 owgi = await samu330.downloadAndSaveMediaMessage(ger);
 anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', owgi);
 teks = `${anu.display_url}`;
@@ -5617,7 +5694,7 @@ case 'caras':
 var imgbb = require('imgbb-uploader')
 if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
 cara = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
-reply(mess.wait);
+ ;
 samsam = await samu330.downloadAndSaveMediaMessage(cara);
 anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', samsam);
 resultc = `${anu.display_url}`;
