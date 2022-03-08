@@ -1500,10 +1500,6 @@ ${opcion}`,
 											"rowId": "media"
 										},
 										{
-											"title": "Menu de Stickers🧩",
-											"rowId": "sticker"
-										},
-										{
 											"title": `Menu de Grupos👥`,
 											"rowId": "grupos"
 										},
@@ -1512,20 +1508,8 @@ ${opcion}`,
 											"rowId": "descargas"
 										},
 										{
-											"title": `Comandos de Herramientas⚙`,
-											"rowId": "tools"
-										},
-										{
 											"title": "Comandos para Adultos🔞",
 											"rowId": "+18"
-										},
-										{
-											"title": `Comandos para Logos🎨`,
-											"rowId": "logos"
-										},
-										{
-											"title": "Comandos para el Owner🙂",
-											"rowId": "owner"
 										},
                                         {
 											"title": `Juegos🎮`,
