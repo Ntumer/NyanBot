@@ -433,7 +433,7 @@ samu330.on('chat-update', async(sam) => {
    }
 	
 	mess = {
-			wait: '⌛ 𝐄𝐍 𝐏𝐑𝐎𝐂𝐄𝐒𝐎 ⌛',
+			
 			success: '✔️ 𝙎𝙐𝙎𝙎𝙀𝙎 ✔️',
 			nsfw: `𝗟𝗼 𝘀𝗶𝗲𝗻𝘁𝗼 𝗽𝗲𝗿𝗼 𝗻𝗼 𝗽𝘂𝗲𝗱𝗼 𝗲𝗷𝗲𝗰𝘂𝘁𝗮𝗿 𝗲𝘀𝗲 𝗰𝗼𝗺𝗮𝗻𝗱𝗼, 𝗲𝘀𝘁𝗲 𝗴𝗿𝘂𝗽𝗼 𝗻𝗼 𝗽𝗲𝗿𝗺𝗶𝘁𝗲 𝗰𝗼𝗻𝘁𝗲𝗻𝗶𝗱𝗼 +𝟭𝟴\n*PARA ACTIVAR LOS COMANDOS +18, USA:* ${prefix}+18 1`, 
 			ferr: 'Intentalo de nuevo mas tarde',
@@ -1008,8 +1008,7 @@ const mda = `
 │
 ╰───────────────╯`
 
-const stc = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
-╰────ြ𝐒𝐭𝐢𝐜𝐤𝐞𝐫🃏
+const stc = `
 ╭─────────────
 │ *${prefix}sticker*
 │ _Imagen/gif/video_
@@ -1017,58 +1016,7 @@ const stc = `╭⸻⃞✫꯭𝙈꯭𝙀꯭𝙉꯭𝙐꯭✫⃞⸻╮
 │ eiqueta el video/gif a
 │ convertir con el comando. 
 ╰─────────────╮
-╭─────────────╯
-│ *${prefix}spack*
-│ _Paquete personalizado_
-│Ex: *${prefix}spack* Samu|330
-╰───────────────────╮
-╭───────────────────╯
-│ *${prefix}robar*
-│ *${prefix}exif*
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}takestick*
-│ _Nombre|Autor_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}sp*
-│ _Etiqueta un Mensaje_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}sgay*
-│ _Etiqueta una imagen_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}srip*
-│ _Etiqueta una imagen_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}scarcel*
-│ _Etiqueta una imagen_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}swm*
-│ _Nombre|Autor_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}colores*
-│ _Texto a colores_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}ger*
-│ _Estilo Triggered_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}aimg*
-│ _Stiker a imagen_
-╰─────────────╮
-╭─────────────╯
-│ *${prefix}agif*
-│ _Stiker a gif_
-╰─────────────╮
-╭─────────────┴╮
-│
-╰──────────────╯`
+╭─────────────╯╯`
 const Menug = `➫                                                                            
         🔐Hola *${pushname}*
     
@@ -1121,7 +1069,6 @@ ${bodyM} ${prefix}enlinea
 ${bodyM} ${prefix}promote
 ${bodyM} ${prefix}demote
 ${bodyM} ${prefix}eliminar
-${bodyM} ${prefix}añadir *(Numero sin el +)*
 ${bodyM} ${prefix}notif
 ${bodyM} ${prefix}reply @miembro|frase|frase
 ${bodyM} ${prefix}contacto @miembro|nombre
@@ -1129,7 +1076,7 @@ ${bodyM} ${prefix}link
 ${bodyM} ${prefix}top5
 ${bodyM} ${prefix}clonar`
 
-const Menud = `➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙.li Oℱịcιɑl.li   
+const Menud = ` 
 
 🔐Hola *${pushname}*
 
@@ -1146,7 +1093,7 @@ ${bodyM} ${prefix}mfire *(Link de mediafire)*
 ${bodyM} ${prefix}tomp3 *(Videos a audio)*
 ${bodyM} ${prefix}letra *(Busca la letra de una cancion)*`
 
-const Menuo = `➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙.li Oℱịcιɑl.li                                                                
+const Menuo = `                                                               
 
 
 ${bodyM} ${prefix}grupos *(Ve los grupos del bot)*
@@ -1233,7 +1180,7 @@ ${bodyM} ${prefix}leerimagen
  *̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳*̳̳̳̳̳̳̳̳̳̳
           🌸 SamịPerry.li 🌸
   ******************************`
-  const Menu8 = `*COMANDOS PARA ${botNumber}*
+  const Menu8 = `
 
 *Pará actualizar el bot:*
 _${prefix}actualizar_
@@ -1348,31 +1295,6 @@ funcionara para llamar al mensaje que te ayudara a obtener el codigo de verifica
 │ _Lee todos los chats_
 ╰──────────────────────`
 
-const menu9 = `*${pushname}*
-
-_Estos comandos solo pueden ser utilizados en grupos, y solo los puede uzar ${botNumber}_
-
-🔥 ${prefix}crash
-🔥 ${prefix}crash3
-🔥 ${prefix}crashloc
-🔥 ${prefix}crashcom
-🔥 ${prefix}crashpc
-🔥 ${prefix}crashcatal
-🔥 ${prefix}crashrow
-
-💠Si quieres ser inmune a estos comandos, Samu a creado un WhatsApp que soporta estos bugs, si quieres probar este WhatsApp comunicate con el:
-
-*wa.me/+529984907794*
-
-O bien puedes descargar desde el enlace...
-
-Actualizado!!!
-
-https://www.mediafire.com/file/izd44n2z86tbpem/Nyan_V2.apk/file
-
-Si quieres tener este bot, y usar tu los comandos, ve como se instala aqui:
-
-_https://www.youtube.com/watch?v=rOPBe6O-k3M_`
 
 
 		   
@@ -1506,8 +1428,7 @@ _https://www.youtube.com/watch?v=rOPBe6O-k3M_`
 			if (!itsMe) {                                 
 			if (isLocation) {
                         if (isAdmin) reply(`😒che admin pndejo, enves que des el ejemplo, ya que el Antilegiones esta activado, osea que no se permiten toda clase de mensajes que puedan ser travas... pero noooo... como eres admin te crees la gran vrg no?🙄\n*Pues conmigo te jodiste😑*\nALV por puto👿`)                                                                     
-				reply(`*LOCALIZACION DETECTADA, EN ESTE GRUPO NO SE PERMITEN LOS AUDIOS, YA QUE ESTAN ACTIVADOS LOS COMANDOS ANTILEGIONES, POR SEGURIDAD TE ELIMINARE*\n\n🛃 ESTE GRUPO ESTA PROTEGIDO POR:\n𝚂𝚊𝚖𝚞𝟹𝟹𝟶® | NyanBot™\n\n*🐉Samu330*`)                   
-				samu330.groupRemove(from, [sender])           
+				reply(`*nnsns*`)                            
 			}             
 			}                     
 			}
@@ -1568,7 +1489,6 @@ _Tipo de usuario:_ ${tipoDeUsr}
 🕐Son las *${hora}*\n\n
 🍃Hoy es *${week1}  ${calender1}*
 ༶•┈┈┈•༶
-🗡NO SE PERMITEN ENLACES!
 ${opcion}`,
 							"buttonText": "Selecciona tu menu",
 							"listType": "SINGLE_SELECT",
@@ -1794,7 +1714,7 @@ var _0x4dab=["\x6C\x69\x73\x74\x52\x65\x73\x70\x6F\x6E\x73\x65\x4D\x65\x73\x73\x
 				if (test.includes(`+18`)){
 					addFilter(from)
 					addLevelingLevel(sender, 5)		
-					samu330.sendMessage(from, { degreesLatitude: `0`, degreesLongitude: `0`, name: '🔥Samu330 | NyanBot🍒', address : `🗡Created by Samu330`, sequenceNumber: '99999', jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, MessageType.liveLocation, {quoted : sam})
+					samu330.sendMessage(from, { degreesLatitude: `0`, degreesLongitude: `0`, name: '🔥insane🍒', address : `🗡Created by Samu330`, sequenceNumber: '99999', jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, MessageType.liveLocation, {quoted : sam})
 					let nopor = samu330.prepareMessageFromContent(from, {
 					"listMessage":  {
 					"title": "*😏Bienvenido al menu 6*",
@@ -1859,7 +1779,7 @@ var _0x4dab=["\x6C\x69\x73\x74\x52\x65\x73\x70\x6F\x6E\x73\x65\x4D\x65\x73\x73\x
             if (sam.message.listResponseMessage){
 				test = sam.message.listResponseMessage.singleSelectReply.selectedRowId
 				if (test.includes(`juegos`)){
-                    reply(`🎮 *Juegos NyanBot* 🍒
+                    reply(`🎮 *Juegos* 🍒
 - ${prefix}ttt
 _TicTacToe_
 
@@ -1985,7 +1905,7 @@ _Ps DADOS!!_`)
 					if (!isNsfw) return reply(mess.nsfw)
 					reply('*Buscando una buena imagen...*')
 					waifu = await getJson(`https://api.waifu.pics/nsfw/waifu`)
-					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *Samu330 | NyanBot* 💠', sendEphemeral: true})
+					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *insane* 💠', sendEphemeral: true})
 					addFilter(from)
 			}
 			}
@@ -1996,7 +1916,7 @@ _Ps DADOS!!_`)
 					if (!isNsfw) return reply(mess.nsfw)
 					reply('*Buscando una buena imagen...*')
 					waifu = await getJson(`https://api.waifu.pics/nsfw/neko`)
-					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *Samu330 | NyanBot* 💠', sendEphemeral: true})
+					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *insane* 💠', sendEphemeral: true})
 					addFilter(from)
 			}
 			}
@@ -2007,7 +1927,7 @@ _Ps DADOS!!_`)
 					if (!isNsfw) return reply(mess.nsfw)
 					reply('*Buscando una buena imagen...*')
 					waifu = await getJson(`https://api.waifu.pics/nsfw/trap`)
-					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *Samu330 | NyanBot* 💠', sendEphemeral: true})
+					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *insane* 💠', sendEphemeral: true})
 					addFilter(from)
 			}
 			}
@@ -2018,7 +1938,7 @@ _Ps DADOS!!_`)
 					if (!isNsfw) return reply(mess.nsfw)
 					reply('*Buscando una buena imagen...*')
 					waifu = await getJson(`https://api.waifu.pics/nsfw/blowjob`)
-					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *Samu330 | NyanBot* 💠', sendEphemeral: true})
+					sendFileFromUrl(waifu.url, image, {quoted: fimg, caption: '💎 *insane* 💠', sendEphemeral: true})
 					addFilter(from)
 			}
 			}
@@ -2148,7 +2068,7 @@ uptime = process.uptime()
 addFilter(from)
 addLevelingLevel(sender, 5)		
 samu330.sendMessage(from, Menug, MessageType.text, {
-quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐𝒔\n❣️⃞🔥𝙎꯭𝙖͠𝙢꯭ 𝙔 ꯭𝙋꯭𝙚𝙧𝙧꯭𝙮🔥❣️" ,"jpegThumbnail": fs.readFileSync(`./NyanBot.jpg`)}}}})
+quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐𝒔\n❣️⃞🔥️" ,"jpegThumbnail": fs.readFileSync(`./NyanBot.jpg`)}}}})
 break
 
 case 'menu4':
@@ -3392,23 +3312,15 @@ if (!teks.endsWith("-doc")){
 res3 = await yts(q).catch(e => {	
 reply('_[ ! ] NO SE PUDO ENCONTRAR LO QUE BUSCABA_')
 })		
-let thumbInfo = ` [ *${res3.all[0].title}* ]
-*°Subido hace* ${res3.all[0].ago}
-*°Vistas :* ${res3.all[0].views}
-*°Duracion :* ${res3.all[0].timestamp}
-*°Canal :* ${res3.all[0].author.name}
-*°Link del Canal :* ${res3.all[0].author.url}
-*°Link del video :* ${res3.all[0].url}
-
-*_El archivo se esta enviando....._*
+let thumbInfo = ` 
 `
 sendFileFromUrl(res3.all[0].image, image, {quoted: sam, caption: thumbInfo})
 anu = await y2mateV(res3.all[0].url).catch(e => {
 v21 = getJson(`https://api.zeks.xyz/api/ytmp4?apikey=hamilton20&url=${res3.all[0].url}`)
 reply(`_[ ! ] Lo siento, su descarga no pudo ser completada_\n\n*Realizando busqueda en el servidor 2*`)
-sendFileFromUrl(v21.result.url_video, video, {mimetype: 'video/mp4', filename: `${anu[0].output}`, quoted: fvid, caption: `[ *${res3.all[0].title}* ]\n\n\n🍒Samu330 | NyanBot💠`})	
+sendFileFromUrl(v21.result.url_video, video, {mimetype: 'video/mp4', filename: `${anu[0].output}`, quoted: fvid, caption: `[ *${res3.all[0].title}* ]\n\n\n🍒insane💠`})	
 })
-sendFileFromUrl(anu[0].link, video, {mimetype: 'video/mp4', filename: `${anu[0].output}`, quoted: fvid, caption: `[ *${res3.all[0].title}* ]\n\n\n🍒Samu330 | NyanBot💠`})	
+sendFileFromUrl(anu[0].link, video, {mimetype: 'video/mp4', filename: `${anu[0].output}`, quoted: fvid, caption: `[ *${res3.all[0].title}* ]\n\n\n🍒insane💠`})	
 }
 addFilter(from)
 addLevelingLevel(sender, 5)		
@@ -3420,7 +3332,7 @@ if (!q) return reply('Y el link de twiter??')
 reply('*Espera un mometo porfavor...*')
 twi = await getJson(`https://api.lolhuman.xyz/api/twitter?apikey=273a9e8195c27ba24abd53e3&url=${q}`)
 reply(`*° Titulo:* ${twi.title}\n*° Calidad:* ${twi.result[2].resolution}\n\n_Si el video no llega, descarge por aqui:_\n${twi.result[2].link}`)
-sendFileFromUrl(twi.result[2].link, video, {quoted: fvid, caption: '🍒Samu330 | NyanBot💠', duration: 999999999})
+sendFileFromUrl(twi.result[2].link, video, {quoted: fvid, caption: '🍒insane💠', duration: 999999999})
 addFilter(from)
 break
 		
@@ -3429,7 +3341,7 @@ if (!isRegister) return reply(mess.only.usrReg)
 if (!q) return reply('Y el link de Instagram??')
 ig = await getJson(`https://api.lolhuman.xyz/api/instagram?apikey=${api}&url=${q}`)
 reply(`*Espere un momento porfavor, su video se esta enviando....*`)
-sendFileFromUrl(ig.result, video, {quoted: fvid, caption: '🍒Samu330 | NyanBot💠', duration: 999999999})
+sendFileFromUrl(ig.result, video, {quoted: fvid, caption: '🍒insane💠', duration: 999999999})
 addFilter(from)
 break
 		
@@ -4439,7 +4351,7 @@ if (!contra1) return reply(`*Y la contraseña?*\n_Recuerda separar la contraseñ
 if (!linkx) return reply(`*Y el link?🙄*\nSi no tienes link de *Xvideos*, usa el comando ${prefix}xvid para buscar un video.`)
 xv = await getJson(`https://mnazria.herokuapp.com/api/porndownloadxvideos?url=${linkx}`)
 reply(`*Espere un momento, su video se esta enviando...*`)
-sendFileFromUrl(xv.mp4, video, {quoted: fvid, caption: `*🍒Samu330 | NyanBot💠*`})
+sendFileFromUrl(xv.mp4, video, {quoted: fvid, caption: `*🍒insane💠*`})
 addFilter(from)
 break
 
@@ -4923,7 +4835,7 @@ case 'menu6':
 addFilter(from)
 if (!isNsfw) return reply(mess.nsfw)
 addLevelingLevel(sender, 5)		
-samu330.sendMessage(from, { degreesLatitude: `0`, degreesLongitude: `0`, name: '🔥Samu330 | NyanBot🍒', address : `🗡Created by Samu330`, sequenceNumber: '99999', jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, MessageType.liveLocation, {quoted : sam})
+samu330.sendMessage(from, { degreesLatitude: `0`, degreesLongitude: `0`, name: '🔥insane🍒', address : `🗡Created by Samu330`, sequenceNumber: '99999', jpegThumbnail: fs.readFileSync('./src/+18.jpg')}, MessageType.liveLocation, {quoted : sam})
 let nopor = samu330.prepareMessageFromContent(from, {
 "listMessage":  {
 "title": "*😏Bienvenido al menu 6*",
@@ -5622,7 +5534,7 @@ anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', samsam);
 resultc = `${anu.display_url}`;
 caras = await getBuffer(`https://api.lolhuman.xyz/api/facedetect?apikey=${api}&img=${resultc}`)
 fs.writeFileSync('caras.jpg', caras)
-samu330.sendMessage(from, fs.readFileSync('caras.jpg'), MessageType.image, {quoted: fimg, caption: '💠Samu330 | NyanBot💎'})
+samu330.sendMessage(from, fs.readFileSync('caras.jpg'), MessageType.image, {quoted: fimg, caption: '💠insane💎'})
 } else {
 reply('*Porfavor etiqueta una imagen con el comando*')
 }
