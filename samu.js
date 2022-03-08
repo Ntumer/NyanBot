@@ -1941,14 +1941,15 @@ _Ps DADOS!!_`)
 			const pike = "51966653383@s.whatsapp.net"
 			const pay = "15164688607@s.whatsapp.net"
 gracias =
-`*Agradecimientos especiales a:*\n\n*[ Kevin (ds6)]*\n✨ Ayuda especial.\n📀 https://github.com/ds6\n< *@${ds6.split('@')[0]}* >\n\n*[ Aiden ]*\n🧩 Ayuda en General.\n📀 https://github.com/iamaidend\n< *@${aiden.split('@')[0]}* >\n\n*[ Pike ]*\n📀 https://github.com/PikennyW\n< *@${pike.split('@')[0]}* >\n\n\n✨Agradecimientos Especiales:\n\n< *@${pay.split('@')[0]}* >`
+` INFORMACION DE CREDITOS
+loscomandos`
 			samu330.sendMessage(from, `${gracias}`, MessageType.text, {sendEphemeral: true, quoted:  { key: {
 				            fromMe: false,
 				            participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "5219984907794@s.whatsapp.net" } : {})
 				            },
 					                message: {
 							            "documentMessage": { "title": `🍉InsaneService🍒`, 'jpegThumbnail': fs.readFileSync('./media/SmWW.png')}}
-								                }, contextInfo: {"externalAdReply": { "title": "🎩 | সামু৩৩০🏹", "body": "[ ★ ] 山姆 330", "sourceUrl": `https://instagram.com/servicioinsane`, "thumbnail": fs.readFileSync('./media/reply.png')}, mentionedJid: [ds6, aiden, pike, pay]}})
+								                }, contextInfo: {"externalAdReply": { "title": "🎩 | servicioinsane", "body": "[ ★ ] v2", "sourceUrl": `https://instagram.com/servicioinsane`, "thumbnail": fs.readFileSync('./media/reply.png')}, mentionedJid: [ds6, aiden, pike, pay]}})
                                                                                                                                   }                                                                                                         }
 
 			/*if (sam.message.listResponseMessage){
