@@ -3347,7 +3347,7 @@ const media3 = await samu330.downloadAndSaveMediaMessage(encmedia3)
 ran = getRandom('.mp3')
 exec(`ffmpeg -i ${media3} ${ran}`, (err) => {
 fs.unlinkSync(media3)
-if (err) return reply(mess.ferr)
+if (err) return 
 buffer = fs.readFileSync(ran)
 samu330.sendMessage(from, buffer, audio, { mimetype: 'audio/mp4', quoted: faud})
 fs.unlinkSync(ran)
