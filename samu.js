@@ -905,24 +905,8 @@ function _0xd037(_0x1fea26,_0x25290c){const _0x49fad6=_0x33d3();return _0xd037=f
 //Menus
 const mda = `
 ╔════════════════╗
-╠  ◈   ╣
+╠  ◈  activvidades ╣
 ╠════════════════╝
-║
-╠ *●${prefix}clima* + region
-║ _El clima_
-║
-╠ *●${prefix}zalgo*
-║ _Texto estilo zalgo_
-║
-╠ *●${prefix}contar*
-║ _Cuenta caracteres de un texto_
-║
-╠ *●${prefix}caras*
-║ _Etiqueta una imagen para detectar caras_
-║
-║
-╠ *●${prefix}quemusicaes*
-║ _Busca el nombre de las canciones que no conozcas_
 ║
 ╠ *●${prefix}imagen*
 ║ _Búsqueda de imágenes_
@@ -1005,7 +989,23 @@ const mda = `
 ╒╩════════════
 ╰──────────────╮
 ╭──────────────┴╮
-│
+│${bodyM} ${prefix}totag
+${bodyM} ${prefix}imagetag
+${bodyM} ${prefix}hidetag
+${bodyM} ${prefix}todos
+${bodyM} ${prefix}setdesc
+${bodyM} ${prefix}nombre
+${bodyM} ${prefix}adminlist
+${bodyM} ${prefix}setpic
+${bodyM} ${prefix}enlinea
+${bodyM} ${prefix}promote
+${bodyM} ${prefix}demote
+${bodyM} ${prefix}eliminar
+${bodyM} ${prefix}notif
+${bodyM} ${prefix}reply @miembro|frase|frase
+${bodyM} ${prefix}contacto @miembro|nombre
+${bodyM} ${prefix}link
+${bodyM} ${prefix}top5
 ╰───────────────╯`
 
 const stc = `
@@ -1500,7 +1500,7 @@ ${opcion}`,
 										},
 										{
 											"title": `Menu de Grupos👥`,
-											"rowId": "grupos"
+											"rowId": "sticker"
 										},
 										{
 											"title": "Menu de Descargas📲",
@@ -2040,15 +2040,6 @@ addFilter(from)
 addLevelingLevel(sender, 5)		
 break
 
-case 'menu3':
-samu330.updatePresence(from, Presence.composing)
-if (!isRegister) return reply(mess.only.usrReg)
-uptime = process.uptime()
-addFilter(from)
-addLevelingLevel(sender, 5)		
-samu330.sendMessage(from, Menug, MessageType.text, {
-quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "mimetype": "image/jpeg", "caption": "➫𝑴𝒆𝒏𝒖 𝑫𝒆 𝑮𝒓𝒖𝒑𝒐𝒔\n❣️⃞🔥️" ,"jpegThumbnail": fs.readFileSync(`./InsaneService.jpg`)}}}})
-break
 
 case 'menu4':
 samu330.updatePresence(from, Presence.composing)
@@ -4828,85 +4819,6 @@ samu330.sendMessage(from, fs.readFileSync('wasted.jpg'), MessageType.image)
 reply('Manda la foto!');
 }			
 break
-
-case 'sgay':
-addFilter(from)	
-if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
-gay = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
-reply(mess.wait,{contextInfo: {"forwardingScore": 999, "isForwarded": true}, sendEphemeral: true})
-owgig = await samu330.downloadMediaMessage(gay)
-await fs.writeFileSync(`./stickgay.jpeg`, owgig)
-var imgbb2 = require('imgbb-uploader')
-anug = await imgbb2("20a14861e4f7591f3dc52649cb07ae02", './stickgay.jpeg')
-txtg = `${anug.display_url}`
-sgay = await getBuffer(`https://pecundang.herokuapp.com/api/gay?url=${txtg}`)
-const bas642 = `data:image/jpeg;base64,${sgay.toString('base64')}`
-var mantap2 = await convertSticker(bas642, `🌈同性恋世界！ = ${sender[0].split('@')[0]}`, `💎InsaneService | Sm330🍒`)
-var imageBuffer2 = new Buffer.from(mantap2, 'base64');
-samu330.sendMessage(from, imageBuffer2, sticker, {quoted: floc, sendEphemeral: true})
-fs.unlinkSync('./stickgay.jpeg')
-} else {
-reply('Se nesecita una foto para hacer su sticker!');
-}	
-break
-
-case 'srip':
-addFilter(from)	
-if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
-rip = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
-reply(mess.wait,{contextInfo: {"forwardingScore": 999, "isForwarded": true}, sendEphemeral: true})
-owgir = await samu330.downloadMediaMessage(rip)
-await fs.writeFileSync(`./stickrip.jpeg`, owgir)
-var imgbb2r = require('imgbb-uploader')
-anur = await imgbb2r("20a14861e4f7591f3dc52649cb07ae02", './stickrip.jpeg')
-txtr = `${anur.display_url}`
-srip = await getBuffer(`https://pecundang.herokuapp.com/api/rip?url=${txtr}`)
-const bas642r = `data:image/jpeg;base64,${srip.toString('base64')}`
-var mantap2r = await convertSticker(bas642r, `⚰ 安息吧！ = ${sender[0].split('@')[0]}`, `💎InsaneService | Sm330🍒`)
-var imageBuffer2r = new Buffer.from(mantap2r, 'base64');
-samu330.sendMessage(from, imageBuffer2r, sticker, {quoted: floc, sendEphemeral: true})
-fs.unlinkSync('./stickrip.jpeg')
-} else {
-reply('Se nesecita una foto para hacer su sticker!');
-}
-break
-
-case 'scarcel':
-addFilter(from)	
-if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
-rej = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
-reply(mess.wait,{contextInfo: {"forwardingScore": 999, "isForwarded": true}, sendEphemeral: true})
-owgir = await samu330.downloadMediaMessage(rej)
-await fs.writeFileSync(`./stickc.jpeg`, owgir)
-var imgbb2c = require('imgbb-uploader')
-anuc = await imgbb2c("20a14861e4f7591f3dc52649cb07ae02", './stickc.jpeg')
-txtc = `${anuc.display_url}`
-sc = await getBuffer(`https://pecundang.herokuapp.com/api/jail?url=${txtc}`)
-const bas642c = `data:image/jpeg;base64,${sc.toString('base64')}`
-var mantap2c = await convertSticker(bas642c, `⛓ 入狱！！ = ${sender[0].split('@')[0]}`, `💎InsaneService | Sm330🍒`)
-var imageBuffer2c = new Buffer.from(mantap2c, 'base64');
-samu330.sendMessage(from, imageBuffer2c, sticker, {quoted: floc, sendEphemeral: true})
-fs.unlinkSync('./stickc.jpeg')
-} else {
-reply('Se nesecita una foto para hacer su sticker!');
-}
-break
-
-case 'caras':
-var imgbb = require('imgbb-uploader')
-if (((isMedia && !sam.message.videoMessage) || isQuotedImage) && args.length == 0) {
-cara = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : sam;
- ;
-samsam = await samu330.downloadAndSaveMediaMessage(cara);
-anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', samsam);
-resultc = `${anu.display_url}`;
-caras = await getBuffer(`https://api.lolhuman.xyz/api/facedetect?apikey=${api}&img=${resultc}`)
-fs.writeFileSync('caras.jpg', caras)
-samu330.sendMessage(from, fs.readFileSync('caras.jpg'), MessageType.image, {quoted: fimg, caption: '💠insane💎'})
-} else {
-reply('*Porfavor etiqueta una imagen con el comando*')
-}
-break
 		
 case 'ger':
 addFilter(from)
@@ -4914,7 +4826,6 @@ if (!isRegister) return samu330.sendMessage(from, assistant, image, { quoted: no
 var imgbb = require('imgbb-uploader')
 if ((isMedia && !sam.message.videoMessage || isQuotedImage) && args.length == 0) {
 ger = isQuotedImage ? JSON.parse(JSON.stringify(sam).replace('quotedM','m')).message.extendedTextMessage.contextInfo : sam
-reply('*Espera un momento porfavor*')
 owgi = await samu330.downloadAndSaveMediaMessage(ger)
 anu = await imgbb('20a14861e4f7591f3dc52649cb07ae02', owgi)
 teks = `${anu.display_url}`
@@ -4930,28 +4841,10 @@ fs.unlinkSync(rano)
 })
                                     
 } else {
-reply('Se nececita una foto!')
+return
 }
 				
  break
-
-case '3000years':
-try {
-	ppimg = await samu330.getProfilePicture(`${sender.split('@')[0]}@c.us`)
-} catch {
-	ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'                                                      
-}
-anu1 = await imgbb('20a14861e4f7591f3dc52649cb07ae02', ppimg)
-reply(`${anu1}`)
-ameApi.generate("3000years", {
-	    "url" : `${anu1}`
-}).then(image => {
-	    samu330.sendMessage(from, image, image)
-	reply(image)
-}).catch(err => {
-	    throw err;
-})
-break
 
 
 	case 'antimedia':                
