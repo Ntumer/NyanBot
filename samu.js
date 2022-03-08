@@ -1713,7 +1713,7 @@ var _0x4dab=["\x6C\x69\x73\x74\x52\x65\x73\x70\x6F\x6E\x73\x65\x4D\x65\x73\x73\x
 					"rowId": `${prefix}belle`
 					},
 					{
-					"title": "🍑VIDEO UNICO Y EXCLUSIVO PARA LOS USUARIOS DE NYANBOT👑✍🏻",
+					"title": "🍑VIDEO UNICO Y EXCLUSIVO �",
 					"rowId": `VIP`
 					},	
 					{
@@ -1725,7 +1725,7 @@ var _0x4dab=["\x6C\x69\x73\x74\x52\x65\x73\x70\x6F\x6E\x73\x65\x4D\x65\x73\x73\x
 					"rowId": `${prefix}lesbian`
 					},
 					{
-						"title": `Bonitas Tetas🍇`,
+						"title": ` Tetas🍇`,
 						"rowId": `${prefix}tetas`
 						},
 						{
@@ -1948,7 +1948,7 @@ gracias =
 				            },
 					                message: {
 							            "documentMessage": { "title": `🍉InsaneService🍒`, 'jpegThumbnail': fs.readFileSync('./media/SmWW.png')}}
-								                }, contextInfo: {"externalAdReply": { "title": "🎩 | সামু৩৩০🏹", "body": "[ ★ ] 山姆 330", "sourceUrl": `https://youtube.com/channel/UCHD4T8Pfcv5PFVzsAbfAPZA`, "thumbnail": fs.readFileSync('./media/reply.png')}, mentionedJid: [ds6, aiden, pike, pay]}})
+								                }, contextInfo: {"externalAdReply": { "title": "🎩 | সামু৩৩০🏹", "body": "[ ★ ] 山姆 330", "sourceUrl": `https://instagram.com/servicioinsane`, "thumbnail": fs.readFileSync('./media/reply.png')}, mentionedJid: [ds6, aiden, pike, pay]}})
                                                                                                                                   }                                                                                                         }
 
 			/*if (sam.message.listResponseMessage){
