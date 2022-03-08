@@ -2209,22 +2209,7 @@ reply(answer)
 addFilter(from)
 break
 		
-case 'lirik':
-case 'letra':
-case 'letras':
-if (args.length < 1) return reply('Escribe el nombre de la cancion')
-if (!isRegister) return reply(mess.only.usrReg)
-samu330.updatePresence(from, Presence.composing)
-if (!q) return reply('*Cual es el nombre de la cancion?*')
-try {
-anu = await getJson(`https://some-random-api.ml/lyrics?title=${q}`)
-lyrics = `🥰Resultado de ${anu.title}:\n\n*Autor:* ${anu.author}\n\n____________________\n\n${anu.lyrics}\n\n🌬Link: ${anu.links.genius}`
-sendFileFromUrl(anu.thumbnail.genius, image, {quoted: fimg, caption: lyrics, sendEphemeral: true})
-} catch {
-reply(mess.ferr)
-}
-addFilter(from)
-break
+
 
 case 'b1':
         
@@ -4675,22 +4660,7 @@ const latensi = speed() - timestamp
 teks = `_Pong_ xD\n*ESTADISTICAS DEL BOT:*\n*- Group Chats :* ${groups.length}\n*- Private Chats :* ${privat.length}\n*- Total Chats :* ${totalChat.length}\n*- Speed :* ${latensi.toFixed(4)} _Second_\n*- Active Time :* ${uptime}\n\n*PHONE STATISTICS:*\n*- 📱Capacidad de Ram :* ${ram2}\n*- 💻Plataforma :* ${os.platform()}\n*- 🌐Hostname :* ${os.hostname()}\n*- 🕐Uptime :* ${os.uptime()}\n*- 🪀Wa Version:* ${samu330.user.phone.wa_version}\n*- 📡Os Version:* ${samu330.user.phone.os_version}\n*- 🔐Device Manufacturer:* ${samu330.user.phone.device_manufacturer}\n*- 📲Device Model:* ${samu330.user.phone.device_model}\n*- 🧬Os Build Number:* ${samu330.user.phone.os_build_number}\n${os.loadavg()}\n\n${os.networkInterfaces()}\n\n${os.cpus()}`
 samu330.sendMessage(from, teks, MessageType.text, {quoted: fdoc, contextInfo: {"forwardingScore": 999, "isForwarded": true}})
 break
-case 'clonar':
-if (!isGroup) return reply(mess.only.group)
-if (args.length < 1) return reply('Etiqueta a alguien para utilizar su foto!!!')
-if (sam.message.extendedTextMessage === undefined || sam.message.extendedTextMessage === null) return reply('Etiqueta a alguien')
-mentioned = sam.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let {jid, id1, notify } = groupMembers.find(x => x.jid === mentioned)
-try {
-pp = await samu330.getProfilePicture(id)
-buffer = await getBuffer(pp)
-samu330.updateProfilePicture(botNumber, buffer)
-mentions(`La foto de perfil se actualizó correctamente con la foto de perfil de: @${id.split('@')[0]}`, [jid], true)
-} catch (e) {
-reply(mess.ferr)
-}
 
-break
 case 'queanime':
 if ((isMedia && !sam.message.videoMessage || isQuotedImage) && args.length == 0) {
  
@@ -4713,36 +4683,7 @@ samu330.sendMessage(from, attp1, sticker, {quoted: ftoko, contextInfo: {"forward
 break
 		
 
-case 'añadir':
-if (!isGroup) return reply(mess.only.group)
-if (!botAdmin) return reply(mess.only.Badmin)
-if (args.length < 1) return reply('Y el numero?')
-if (args[0].startsWith('99')) return reply('Utiliza el codigo de pais')
-try {
-num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
-samu330.groupAdd(from, [num])
-} catch (e) {
-console.log('Error :', e)
-return samu330.sendMessage(from, 'Modo privado dice:v', MessageType.text)
-}
-break
 
-case 'public':
-if (!isOwner && !itsMe) return await reply('Este comando solo puede ser usado por *InsaneService* ⚙')
-if (public) return await reply('*El modo publico Ya esta activado*')
-config["public"] = true
-public = true
-fs.writeFileSync("./config.json", JSON.stringify(config, null, 4))
-await wa.sendFakeStatus(from, "*Se activo el modo publico*", "Public : true")
-break
-case 'self':
-if (!isOwner && !itsMe) return await reply('Este comando solo puede ser usado por *InsaneService* ⚙')
-if (!public) return await reply('El modo privado ya estaba activado')
-config["public"] = false
-public = false
-fs.writeFileSync("./config.json", JSON.stringify(config, null, 4))
-await wa.sendFakeStatus(from, "*Se a cambiado a modo PRIVADO*", "Self : true")
-break
 case 'bc':
 if (!isOwner) return reply('Solo *Samu* puede usar este comando')
 if (args.length < 1) return reply('Y el anuncio?')
